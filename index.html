@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0b0c0f" />
-    <meta name="description" content="The Ideation Lab — a student entrepreneurship and innovation team documenting its journey through NEC 2026 with E-Cell IIT Bombay." />
+    <meta name="description" content="The Ideation Lab is a student-driven team focused on innovation, entrepreneurship, and turning ideas into impactful initiatives through NEC 2026." />
     <meta property="og:title" content="The Ideation Lab | NEC 2026 × E-Cell IIT Bombay" />
     <meta property="og:description" content="Ideas are easy. Building them isn't." />
     <meta property="og:type" content="website" />
@@ -20,14 +20,14 @@
     <div class="noise" aria-hidden="true"></div>
     <header class="site-header">
       <a class="brand" href="#home" aria-label="The Ideation Lab home">
-        <span class="brand-mark">N</span>
+        <span class="brand-mark">IL</span>
         <span>The Ideation Lab <small>NEC 2026</small></span>
       </a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#about">About</a><a href="#team">Team</a><a href="#journey">Journey</a>
         <a href="#gallery">Gallery</a><a href="#events">Events</a>
-        <a class="nav-upcoming" href="#upcoming">Upcoming <i>●</i></a><a href="#contact">Contact</a>
+        <a class="nav-upcoming" href="#upcoming">Upcoming Events <i id="upcoming-indicator" hidden>●</i></a><a href="#contact">Contact</a>
       </nav>
       <a class="button button-small header-cta" href="#social">Follow our journey <span>↗</span></a>
     </header>
@@ -36,8 +36,9 @@
       <section class="hero section-shell" id="home">
         <div class="hero-copy reveal">
           <p class="eyebrow"><span class="eyebrow-dot"></span> NEC 2026 × E-CELL IIT BOMBAY</p>
+          <p class="hero-tagline" id="hero-tagline"></p>
           <h1>Ideas are easy.<br /><em>Building them isn't.</em></h1>
-          <p class="hero-lede">A student team exploring entrepreneurship, innovation and the journey from an idea to something worth building.</p>
+          <p class="hero-lede" id="team-introduction"></p>
           <div class="hero-actions"><a class="button" href="#journey">Explore our journey <span>↘</span></a><a class="text-link" href="#team">Meet the team <span>↗</span></a></div>
           <div class="hero-status"><span class="pulse"></span> NEC 2026 <b>•</b> JOURNEY IN PROGRESS</div>
         </div>
@@ -55,25 +56,25 @@
       </section>
 
       <section class="stats section-shell reveal" aria-label="Team statistics">
-        <div class="stat"><strong data-count="0">00</strong><span>Team members</span></div>
-        <div class="stat"><strong data-count="0">00</strong><span>Projects</span></div>
-        <div class="stat"><strong data-count="0">00</strong><span>Events</span></div>
-        <div class="stat"><strong data-count="0">00</strong><span>Achievements</span></div>
-        <p class="stats-note">Live data will appear here<br /><span>as the journey unfolds.</span></p>
+        <div class="stat"><strong>—</strong><span>Team members</span></div>
+        <div class="stat"><strong>—</strong><span>Projects</span></div>
+        <div class="stat"><strong>—</strong><span>Events</span></div>
+        <div class="stat"><strong>—</strong><span>Achievements</span></div>
+        <p class="stats-note">Verified numbers will appear<br /><span>as they become available.</span></p>
       </section>
 
       <section class="intro section-shell section-pad" id="about">
         <div class="section-kicker reveal">01 — THE WHY</div>
-        <div class="split-heading reveal"><h2>More than<br /><em>a team.</em></h2><div><p class="large-copy">We are a room full of questions, half-formed ideas and the stubborn belief that making something is the best way to understand it.</p><p class="muted-copy">The Ideation Lab is a student-led space for entrepreneurship, technology and thoughtful problem solving. NEC 2026 is our next proving ground — not the finish line.</p></div></div>
+        <div class="split-heading reveal"><h2>More than<br /><em>a team.</em></h2><div><p class="large-copy" id="about-introduction"></p><p class="muted-copy" id="about-origin"></p></div></div>
         <div class="principles reveal"><span>01 / Build over talk</span><span>02 / Learn by doing</span><span>03 / Stay curious</span><span>04 / Keep improving</span></div>
       </section>
 
       <section class="beliefs section-shell section-pad">
         <div class="beliefs-intro reveal"><div class="section-kicker">02 — OUR APPROACH</div><h2>Curious by<br /><em>default.</em></h2><p>We are here to challenge assumptions, collaborate across disciplines and turn “what if?” into a first version.</p></div>
         <div class="belief-list">
-          <article class="belief reveal"><span>01</span><div><h3>Our vision</h3><p>A future where student ideas are given the room, rigor and community they need to become useful.</p></div><b>↗</b></article>
-          <article class="belief reveal"><span>02</span><div><h3>Our mission</h3><p>To experiment in public, learn from real-world feedback and make the process of building less lonely.</p></div><b>↗</b></article>
-          <article class="belief reveal"><span>03</span><div><h3>What we believe in</h3><p>Small prototypes. Honest conversations. Better questions. Progress that compounds.</p></div><b>↗</b></article>
+          <article class="belief reveal"><span>01</span><div><h3>Our vision</h3><p id="about-vision"></p></div><b>↗</b></article>
+          <article class="belief reveal"><span>02</span><div><h3>Our mission</h3><p id="about-mission"></p></div><b>↗</b></article>
+          <article class="belief reveal"><span>03</span><div><h3>What we believe in</h3><p id="about-beliefs-detail"></p></div><b>↗</b></article>
         </div>
       </section>
 
@@ -95,7 +96,7 @@
 
       <section class="events section-shell section-pad" id="events">
         <div class="section-head reveal"><div><div class="section-kicker">06 — THE CALENDAR</div><h2>Where ideas<br /><em>meet reality.</em></h2></div><a class="text-link" href="#upcoming">View upcoming events <span>↘</span></a></div>
-        <div class="event-columns"><div><h3 class="column-label">Upcoming</h3><div id="upcoming-preview" class="event-list"></div></div><div><h3 class="column-label">Past &amp; ongoing</h3><div class="empty-state"><span>✦</span><p>Your event archive will live here.</p><small>Add events in <code>data.js</code> when they happen.</small></div></div></div>
+        <div class="event-columns"><div><h3 class="column-label">Upcoming</h3><div id="upcoming-preview" class="event-list"></div></div><div><h3 class="column-label">Past &amp; activities</h3><div class="filter-bar event-filters" id="event-filters"></div><div id="past-events" class="event-list"></div></div></div>
       </section>
 
       <section class="upcoming section-shell section-pad" id="upcoming">
@@ -104,18 +105,18 @@
       </section>
 
       <section class="social section-shell section-pad" id="social">
-        <div class="social-inner reveal"><div class="section-kicker">08 — STAY CLOSE</div><h2>Follow our<br /><em>journey.</em></h2><p>The journey doesn't end on this website. Follow us as we build, learn, compete and create.</p><div class="social-links"><a href="#" aria-label="Instagram placeholder">Instagram <span>↗</span></a><a href="#" aria-label="LinkedIn placeholder">LinkedIn <span>↗</span></a></div></div>
+        <div class="social-inner reveal"><div class="section-kicker">08 — STAY CLOSE</div><h2>Follow our<br /><em>journey.</em></h2><p>The journey doesn't end on this website. Follow us as we build, learn, compete and create.</p><div class="social-links"><a id="instagram-social" href="#">Instagram <span>↗</span></a><a id="linkedin-social" href="#">LinkedIn <span>↗</span></a></div></div>
         <div class="social-stamp" aria-hidden="true">BUILD<br />LEARN<br /><i>REPEAT</i></div>
       </section>
 
       <section class="contact section-shell section-pad" id="contact">
-        <div class="contact-grid"><div class="reveal"><div class="section-kicker">09 — SAY HELLO</div><h2>Let's make<br /><em>something.</em></h2><p>Want to connect with The Ideation Lab?</p><div class="contact-details"><span>TEAM EMAIL</span><a href="mailto:[TEAM EMAIL]">[TEAM EMAIL] ↗</a><span>INSTAGRAM</span><a href="#">[INSTAGRAM URL] ↗</a><span>LINKEDIN</span><a href="#">[LINKEDIN URL] ↗</a></div></div>
+        <div class="contact-grid"><div class="reveal"><div class="section-kicker">09 — SAY HELLO</div><h2>Let's make<br /><em>something.</em></h2><p>Want to connect with The Ideation Lab?</p><div class="contact-details"><span>TEAM EMAIL</span><a id="team-email" href="#">[TEAM EMAIL]</a><span>INSTAGRAM</span><a id="instagram-contact" href="#">[INSTAGRAM URL] ↗</a><span>LINKEDIN</span><a id="linkedin-contact" href="#">[LINKEDIN URL] ↗</a></div></div>
           <form class="contact-form reveal" id="contact-form"><label>Name<input name="name" required placeholder="Your name" /></label><label>Email<input name="email" type="email" required placeholder="you@example.com" /></label><label>Message<textarea name="message" required rows="4" placeholder="Tell us what's on your mind..."></textarea></label><button class="button" type="submit">Send message <span>↗</span></button><p class="form-message" role="status"></p></form>
         </div>
       </section>
     </main>
 
-    <footer class="footer section-shell"><div class="footer-top"><div><a class="brand" href="#home"><span class="brand-mark">N</span><span>The Ideation Lab <small>NEC 2026</small></span></a><p>Ideas become meaningful when people<br />decide to build them.</p></div><div class="footer-nav"><a href="#about">About</a><a href="#team">Team</a><a href="#journey">Journey</a><a href="#gallery">Gallery</a><a href="#events">Events</a><a href="#upcoming">Upcoming</a><a href="#contact">Contact</a></div></div><div class="footer-bottom"><span>© 2026 The Ideation Lab. All rights reserved.</span><span>NEC 2026 × E-CELL IIT BOMBAY</span></div></footer>
+    <footer class="footer section-shell"><div class="footer-top"><div><a class="brand" href="#home"><span class="brand-mark">IL</span><span>The Ideation Lab <small>NEC 2026</small></span></a><p>Ideas become meaningful when people<br />decide to build them.</p></div><div class="footer-nav"><a href="#about">About</a><a href="#team">Team</a><a href="#journey">Journey</a><a href="#gallery">Gallery</a><a href="#events">Events</a><a href="#upcoming">Upcoming</a><a href="#contact">Contact</a></div></div><div class="footer-bottom"><span>© 2026 The Ideation Lab. All rights reserved.</span><span>NEC 2026 × E-CELL IIT BOMBAY</span></div></footer>
 
     <dialog class="profile-modal" id="profile-modal"><button class="modal-close" aria-label="Close profile">×</button><div id="modal-content"></div></dialog>
     <dialog class="lightbox" id="lightbox"><button class="modal-close" aria-label="Close image viewer">×</button><div id="lightbox-content"></div></dialog>
